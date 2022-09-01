@@ -1,0 +1,144 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXFileReference section */
+		4F3AE00128B8F22200072FC9 /* L14_N_Queens.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L14_N_Queens.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F3AE00328BB345300072FC9 /* DP_25_lcs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_25_lcs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F4142DD2882F7FB009074B2 /* L8_L9_Combination.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L8_L9_Combination.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F4317C028B3BCCC008645B0 /* DP_20_coins.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_20_coins.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F49F5CB28A1127600C21C3C /* DP_11_Triangle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_11_Triangle.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F49F5CC28A144A300C21C3C /* DP_12_MaxPath.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_12_MaxPath.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F575E63288BEFE5003A78E9 /* L10_Subset.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L10_Subset.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F575E64288C05EC003A78E9 /* L12_13_Permutation.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L12_13_Permutation.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F5E62802888474C009F7512 /* DP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DP.swift; sourceTree = "<group>"; };
+		4F5E628128898E26009F7512 /* DP_8_9_Grid_Unique_Paths.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_8_9_Grid_Unique_Paths.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F60EEEA28A6B970005D2686 /* DP_14_Subset_Sum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_14_Subset_Sum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F60EEEC28AD3198005D2686 /* DP_15_Partition_Equal_Subset.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_15_Partition_Equal_Subset.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F6A1D482882CF36007135F9 /* L6_L7_Subsequence.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L6_L7_Subsequence.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F9ED4A628B66529009B5B49 /* DP_23_knapsack2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_23_knapsack2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FB35C3928AF9AD800A79F8A /* DP_17_find_ways.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_17_find_ways.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FB35C3A28B0D4F700A79F8A /* DP_19_knapsack.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_19_knapsack.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FC7338028868DFF005E9626 /* DP_7_Ninjas_Training.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_7_Ninjas_Training.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FCCE06828A2B52E006753EC /* DP_13_Cherrypick_2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_13_Cherrypick_2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FE1480B288AEC9A008451E6 /* DP_10_Minimum_Path_Sum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_10_Minimum_Path_Sum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_16_min_difference.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		4F3AE00228BB32D900072FC9 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AE00328BB345300072FC9 /* DP_25_lcs.playground */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		4F60EEE928A6B439005D2686 /* Subsets */ = {
+			isa = PBXGroup;
+			children = (
+				4F60EEEA28A6B970005D2686 /* DP_14_Subset_Sum.playground */,
+				4F60EEEC28AD3198005D2686 /* DP_15_Partition_Equal_Subset.playground */,
+				4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */,
+				4FB35C3928AF9AD800A79F8A /* DP_17_find_ways.playground */,
+				4FB35C3A28B0D4F700A79F8A /* DP_19_knapsack.playground */,
+				4F4317C028B3BCCC008645B0 /* DP_20_coins.playground */,
+				4F9ED4A628B66529009B5B49 /* DP_23_knapsack2.playground */,
+			);
+			path = Subsets;
+			sourceTree = "<group>";
+		};
+		4F6A1D402882CE90007135F9 = {
+			isa = PBXGroup;
+			children = (
+				4FC7337F28868D74005E9626 /* DP */,
+				4F6A1D472882CE9D007135F9 /* Recursion */,
+			);
+			sourceTree = "<group>";
+		};
+		4F6A1D472882CE9D007135F9 /* Recursion */ = {
+			isa = PBXGroup;
+			children = (
+				4F6A1D482882CF36007135F9 /* L6_L7_Subsequence.playground */,
+				4F4142DD2882F7FB009074B2 /* L8_L9_Combination.playground */,
+				4F575E63288BEFE5003A78E9 /* L10_Subset.playground */,
+				4F575E64288C05EC003A78E9 /* L12_13_Permutation.playground */,
+				4F3AE00128B8F22200072FC9 /* L14_N_Queens.playground */,
+			);
+			path = Recursion;
+			sourceTree = "<group>";
+		};
+		4FC7337F28868D74005E9626 /* DP */ = {
+			isa = PBXGroup;
+			children = (
+				4F3AE00228BB32D900072FC9 /* Strings */,
+				4F60EEE928A6B439005D2686 /* Subsets */,
+				4FC7338028868DFF005E9626 /* DP_7_Ninjas_Training.playground */,
+				4F5E628128898E26009F7512 /* DP_8_9_Grid_Unique_Paths.playground */,
+				4FE1480B288AEC9A008451E6 /* DP_10_Minimum_Path_Sum.playground */,
+				4F49F5CB28A1127600C21C3C /* DP_11_Triangle.playground */,
+				4F49F5CC28A144A300C21C3C /* DP_12_MaxPath.playground */,
+				4FCCE06828A2B52E006753EC /* DP_13_Cherrypick_2.playground */,
+				4F5E62802888474C009F7512 /* DP.swift */,
+			);
+			path = DP;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		4F6A1D412882CE90007135F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+			};
+			buildConfigurationList = 4F6A1D442882CE90007135F9 /* Build configuration list for PBXProject "Angma" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F6A1D402882CE90007135F9;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		4F6A1D452882CE90007135F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		4F6A1D462882CE90007135F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F6A1D442882CE90007135F9 /* Build configuration list for PBXProject "Angma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F6A1D452882CE90007135F9 /* Debug */,
+				4F6A1D462882CE90007135F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F6A1D412882CE90007135F9 /* Project object */;
+}
