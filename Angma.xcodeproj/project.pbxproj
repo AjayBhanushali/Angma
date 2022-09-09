@@ -8,7 +8,7 @@
 
 /* Begin PBXFileReference section */
 		4F3AE00128B8F22200072FC9 /* L14_N_Queens.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L14_N_Queens.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		4F3AE00328BB345300072FC9 /* DP_25_lcs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_25_lcs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_25_27_lcs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F4142DD2882F7FB009074B2 /* L8_L9_Combination.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L8_L9_Combination.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F4317C028B3BCCC008645B0 /* DP_20_coins.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_20_coins.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F49F5CB28A1127600C21C3C /* DP_11_Triangle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_11_Triangle.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -33,7 +33,7 @@
 		4F3AE00228BB32D900072FC9 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				4F3AE00328BB345300072FC9 /* DP_25_lcs.playground */,
+				4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */,
 			);
 			path = Strings;
 			sourceTree = "<group>";

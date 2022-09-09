@@ -124,3 +124,47 @@ func lcsTab(s1: String, s2: String) -> Int {
 
 lcsTab(s1: "acd", s2: "ced")
 lcsTab(s1: "ced", s2: "acd")
+
+//================
+// 27
+// MARK: Tabulation + Space optimization
+// Approach
+// Bottom to Top
+// Set previous: ans for i=0 and j 0 to count-1
+// Iterations
+// for i in 1 to count-1
+// for j in 0 to count-1
+// if char at i and j same, then set current[j] = 1 + prev[j-1]
+// else current[j] = max(prev[j], current[j-1])
+
+// return last of previous
+
+func lcSubstringTab(s1: String, s2: String) -> Int {
+    var previous = Array(repeating: 0, count: s1.count)
+    
+    for j in 0..<s1.count {
+        if s1[0] == s2[j] {
+            previous[j] = 1
+        }
+    }
+    
+    var maximum = 0
+    for i in 1..<s1.count {
+        var current = Array(repeating: 0, count: s1.count)
+        
+        for j in 0..<s2.count {
+            if s1[i] == s2[j] {
+                current[j] = 1 + previous[j-1]
+                maximum = max(maximum, current[j])
+            } else {
+                current[j] = 0
+            }
+        }
+        
+        previous = current
+    }
+    
+    return maximum
+}
+
+print(lcSubstringTab(s1: "abcd", s2: "abzd"))
