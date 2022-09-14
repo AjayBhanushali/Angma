@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		4F207DDB28CF7097007C50AA /* L16_M_colors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L16_M_colors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_28_29_30_31_palindrome.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F3AE00128B8F22200072FC9 /* L14_N_Queens.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L14_N_Queens.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_25_27_lcs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F4142DD2882F7FB009074B2 /* L8_L9_Combination.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L8_L9_Combination.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -34,6 +35,7 @@
 		4F3AE00228BB32D900072FC9 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */,
 				4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */,
 			);
 			path = Strings;
