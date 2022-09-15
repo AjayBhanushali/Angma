@@ -29,6 +29,7 @@
 		4FCCE06828A2B52E006753EC /* DP_13_Cherrypick_2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_13_Cherrypick_2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FE1480B288AEC9A008451E6 /* DP_10_Minimum_Path_Sum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_10_Minimum_Path_Sum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_16_min_difference.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FFE5B0228D3909E00FDF7F0 /* L17_Palindrom_subsrtrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L17_Palindrom_subsrtrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -66,6 +67,7 @@
 		4F6A1D472882CE9D007135F9 /* Recursion */ = {
 			isa = PBXGroup;
 			children = (
+				4FFE5B0228D3909E00FDF7F0 /* L17_Palindrom_subsrtrings.playground */,
 				4F207DDB28CF7097007C50AA /* L16_M_colors.playground */,
 				4F6A1D482882CF36007135F9 /* L6_L7_Subsequence.playground */,
 				4F4142DD2882F7FB009074B2 /* L8_L9_Combination.playground */,
