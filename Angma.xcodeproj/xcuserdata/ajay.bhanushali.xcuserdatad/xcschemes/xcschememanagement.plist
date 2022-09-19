@@ -30,7 +30,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>4</integer>
 		</dict>
 		<key>DP_11_Triangle (Playground) 1.xcscheme</key>
 		<dict>
@@ -51,7 +51,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>5</integer>
 		</dict>
 		<key>DP_12_MaxPath (Playground) 1.xcscheme</key>
 		<dict>
@@ -72,7 +72,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>1</integer>
 		</dict>
 		<key>DP_13_Cherrypick_2 (Playground) 1.xcscheme</key>
 		<dict>
@@ -93,7 +93,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>19</integer>
 		</dict>
 		<key>DP_14_Subset_Sum (Playground) 1.xcscheme</key>
 		<dict>
@@ -156,7 +156,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>0</integer>
 		</dict>
 		<key>DP_15_Partition_Equal_Subset (Playground) 1.xcscheme</key>
 		<dict>
@@ -177,7 +177,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>17</integer>
 		</dict>
 		<key>DP_15_Subset_Sum_Equals (Playground) 1.xcscheme</key>
 		<dict>
@@ -219,7 +219,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>11</integer>
 		</dict>
 		<key>DP_17_find_ways (Playground) 1.xcscheme</key>
 		<dict>
@@ -240,7 +240,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>20</integer>
 		</dict>
 		<key>DP_19_knapsack (Playground) 1.xcscheme</key>
 		<dict>
@@ -261,7 +261,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>10</integer>
 		</dict>
 		<key>DP_20_coins (Playground) 1.xcscheme</key>
 		<dict>
@@ -282,7 +282,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>2</integer>
 		</dict>
 		<key>DP_23_knapsack2 (Playground) 1.xcscheme</key>
 		<dict>
@@ -303,7 +303,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>18</integer>
 		</dict>
 		<key>DP_25_27_lcs (Playground) 1.xcscheme</key>
 		<dict>
@@ -324,7 +324,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>16</integer>
 		</dict>
 		<key>DP_25_lcs (Playground) 1.xcscheme</key>
 		<dict>
@@ -373,7 +373,28 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>13</integer>
+		</dict>
+		<key>DP_32 (Playground) 1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>23</integer>
+		</dict>
+		<key>DP_32 (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
+		<key>DP_32 (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>22</integer>
 		</dict>
 		<key>DP_7_Ninjas_Training (Playground) 1.xcscheme</key>
 		<dict>
@@ -394,14 +415,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>8</integer>
 		</dict>
 		<key>DP_8_9_Grid_Unique_Paths (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>3</integer>
 		</dict>
 		<key>DP_8_Grid_Unique_Paths (Playground) 1.xcscheme</key>
 		<dict>
@@ -450,7 +471,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>12</integer>
 		</dict>
 		<key>L10_Subset copy (Playground) 1.xcscheme</key>
 		<dict>
@@ -478,7 +499,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>21</integer>
 		</dict>
 		<key>L12_Permutation (Playground).xcscheme</key>
 		<dict>
@@ -506,7 +527,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>7</integer>
 		</dict>
 		<key>L16_M_colors (Playground) 1.xcscheme</key>
 		<dict>
@@ -527,7 +548,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>6</integer>
 		</dict>
 		<key>L17_Palindrom_subsrtrings (Playground) 1.xcscheme</key>
 		<dict>
@@ -548,14 +569,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>15</integer>
 		</dict>
 		<key>L6_L7_Subsequence (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>14</integer>
 		</dict>
 		<key>L6_Recursion_on_Subsequences (Playground).xcscheme</key>
 		<dict>
@@ -590,7 +611,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>9</integer>
 		</dict>
 		<key>Pick_Unpick (Playground) 1.xcscheme</key>
 		<dict>

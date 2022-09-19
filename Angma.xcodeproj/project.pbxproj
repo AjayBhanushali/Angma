@@ -28,6 +28,7 @@
 		4FC7338028868DFF005E9626 /* DP_7_Ninjas_Training.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_7_Ninjas_Training.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FCCE06828A2B52E006753EC /* DP_13_Cherrypick_2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_13_Cherrypick_2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FE1480B288AEC9A008451E6 /* DP_10_Minimum_Path_Sum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_10_Minimum_Path_Sum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FE3F70528D4B02F00BAE552 /* DP_32.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_32.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_16_min_difference.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FFE5B0228D3909E00FDF7F0 /* L17_Palindrom_subsrtrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L17_Palindrom_subsrtrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
@@ -36,6 +37,7 @@
 		4F3AE00228BB32D900072FC9 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				4FE3F70528D4B02F00BAE552 /* DP_32.playground */,
 				4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */,
 				4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */,
 			);
