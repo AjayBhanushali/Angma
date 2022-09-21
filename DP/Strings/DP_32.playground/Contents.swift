@@ -41,6 +41,11 @@ func distinctSubsequence(s1: String, s2: String) -> Int {
             return 1
         }
         
+        if l == s1.count {
+            return 0
+        }
+        
+        print("test \(l) \(r)")
         if memo[l][r] != -1 {
             return memo[l][r]
         }
@@ -58,13 +63,71 @@ func distinctSubsequence(s1: String, s2: String) -> Int {
     
     let match = recursion(l: 0, r: 0)
     
-    for m in memo {
-        print(m)
-    }
+//    for m in memo {
+//        print(m)
+//    }
     
     return match
 }
 
 // MARK: Tabulization
 
-distinctSubsequence(s1: "babgbag", s2: "bag")
+//distinctSubsequence(s1: "babgbag", s2: "bag")
+distinctSubsequence(s1: "bagg", s2: "bag")
+
+
+func distinctSubsequenceTab(s1: String, s2: String) -> Int {
+    
+    var memo = Array(repeating: Array(repeating: -1, count: s2.count+1), count: s1.count)
+    
+    for i in 0..<s1.count {
+        memo[i][0] = 1
+    }
+    
+    for j in 0..<s2.count {
+        if s1[0] == s2[j] {
+            memo[0][j+1] = 1
+        } else {
+            memo[0][j+1] = 0
+        }
+    }
+    
+    for l in 1..<s1.count {
+        for r in 0..<s2.count {
+            if s1[l] == s2[r] {
+                memo[l][r+1] = memo[l-1][r+1] + memo[l][r]
+            } else {
+                memo[l][r+1] = memo[l-1][r+1]
+            }
+        }
+    }
+    for m in memo {
+        print(m)
+    }
+    return memo[s1.count-1][s2.count]
+}
+
+distinctSubsequenceTab(s1: "babgbag", s2: "bag")
+
+func distinctSubsequenceTab1D(s1: String, s2: String) -> Int {
+    
+    var subs = Array(repeating: 0, count: s2.count+1)
+    subs[0] = 1
+    for i in 0...s2.count {
+        if s1[0] == s2[i] {
+            subs[i+1] = 1
+        }
+    }
+    
+    for l in 1..<s1.count {
+        for r in 0..<s2.count {
+            if s1[l] == s2[r] {
+                subs[r+1] += subs[r]
+            }
+        }
+    }
+    
+    return subs[s2.count]
+}
+
+distinctSubsequenceTab1D(s1: "babgbag", s2: "bag")

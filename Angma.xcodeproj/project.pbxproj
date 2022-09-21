@@ -21,6 +21,7 @@
 		4F5E628128898E26009F7512 /* DP_8_9_Grid_Unique_Paths.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_8_9_Grid_Unique_Paths.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F60EEEA28A6B970005D2686 /* DP_14_Subset_Sum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_14_Subset_Sum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F60EEEC28AD3198005D2686 /* DP_15_Partition_Equal_Subset.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_15_Partition_Equal_Subset.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F68C3C028DB345300135528 /* DP_33_Edit_Distance.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_33_Edit_Distance.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F6A1D482882CF36007135F9 /* L6_L7_Subsequence.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L6_L7_Subsequence.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F9ED4A628B66529009B5B49 /* DP_23_knapsack2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_23_knapsack2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FB35C3928AF9AD800A79F8A /* DP_17_find_ways.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_17_find_ways.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -37,6 +38,7 @@
 		4F3AE00228BB32D900072FC9 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				4F68C3C028DB345300135528 /* DP_33_Edit_Distance.playground */,
 				4FE3F70528D4B02F00BAE552 /* DP_32.playground */,
 				4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */,
 				4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */,
