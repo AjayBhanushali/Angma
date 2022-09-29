@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		4F056DDF28DCA90B0060EA87 /* DP_34_wildcard_matching.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_34_wildcard_matching.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F207DDB28CF7097007C50AA /* L16_M_colors.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L16_M_colors.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_28_29_30_31_palindrome.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F3AE00128B8F22200072FC9 /* L14_N_Queens.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L14_N_Queens.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_25_27_lcs.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F4142DD2882F7FB009074B2 /* L8_L9_Combination.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L8_L9_Combination.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4F41DD5F28E5CAFF00E50AB6 /* DP_35_BuySell.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_35_BuySell.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F4317C028B3BCCC008645B0 /* DP_20_coins.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_20_coins.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F49F5CB28A1127600C21C3C /* DP_11_Triangle.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_11_Triangle.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F49F5CC28A144A300C21C3C /* DP_12_MaxPath.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_12_MaxPath.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -38,12 +40,21 @@
 		4F3AE00228BB32D900072FC9 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				4F68C3C028DB345300135528 /* DP_33_Edit_Distance.playground */,
-				4FE3F70528D4B02F00BAE552 /* DP_32.playground */,
-				4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */,
 				4F3AE00328BB345300072FC9 /* DP_25_27_lcs.playground */,
+				4F214A4128D21B1E008495F0 /* DP_28_29_30_31_palindrome.playground */,
+				4FE3F70528D4B02F00BAE552 /* DP_32.playground */,
+				4F68C3C028DB345300135528 /* DP_33_Edit_Distance.playground */,
+				4F056DDF28DCA90B0060EA87 /* DP_34_wildcard_matching.playground */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		4F41DD5E28E5CAC600E50AB6 /* Stocks */ = {
+			isa = PBXGroup;
+			children = (
+				4F41DD5F28E5CAFF00E50AB6 /* DP_35_BuySell.playground */,
+			);
+			path = Stocks;
 			sourceTree = "<group>";
 		};
 		4F60EEE928A6B439005D2686 /* Subsets */ = {
@@ -85,6 +96,7 @@
 		4FC7337F28868D74005E9626 /* DP */ = {
 			isa = PBXGroup;
 			children = (
+				4F41DD5E28E5CAC600E50AB6 /* Stocks */,
 				4F3AE00228BB32D900072FC9 /* Strings */,
 				4F60EEE928A6B439005D2686 /* Subsets */,
 				4FC7338028868DFF005E9626 /* DP_7_Ninjas_Training.playground */,
