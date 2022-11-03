@@ -219,7 +219,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>1</integer>
 		</dict>
 		<key>DP_17_find_ways (Playground) 1.xcscheme</key>
 		<dict>
@@ -240,7 +240,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>3</integer>
 		</dict>
 		<key>DP_19_knapsack (Playground) 1.xcscheme</key>
 		<dict>
@@ -373,7 +373,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>2</integer>
 		</dict>
 		<key>DP_32 (Playground) 1.xcscheme</key>
 		<dict>
@@ -438,6 +438,13 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
+		<key>DP_35_36_BuySell (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>DP_35_BuySell (Playground) 1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -485,7 +492,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>4</integer>
 		</dict>
 		<key>DP_8_Grid_Unique_Paths (Playground) 1.xcscheme</key>
 		<dict>
@@ -562,7 +569,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>0</integer>
 		</dict>
 		<key>L12_Permutation (Playground).xcscheme</key>
 		<dict>
@@ -632,7 +639,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>5</integer>
 		</dict>
 		<key>L6_L7_Subsequence (Playground).xcscheme</key>
 		<dict>
