@@ -26,6 +26,8 @@
 		4F68C3C028DB345300135528 /* DP_33_Edit_Distance.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_33_Edit_Distance.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F6A1D482882CF36007135F9 /* L6_L7_Subsequence.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L6_L7_Subsequence.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4F9ED4A628B66529009B5B49 /* DP_23_knapsack2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_23_knapsack2.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FA5A9CC2966A90300A5FE0C /* GCD.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = GCD.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FA5A9CD2967E22600A5FE0C /* Rough.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Rough.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FB35C3928AF9AD800A79F8A /* DP_17_find_ways.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_17_find_ways.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FB35C3A28B0D4F700A79F8A /* DP_19_knapsack.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_19_knapsack.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FC7338028868DFF005E9626 /* DP_7_Ninjas_Training.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_7_Ninjas_Training.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -74,6 +76,7 @@
 		4F6A1D402882CE90007135F9 = {
 			isa = PBXGroup;
 			children = (
+				4FA5A9CB2966A8D000A5FE0C /* iOS */,
 				4FC7337F28868D74005E9626 /* DP */,
 				4F6A1D472882CE9D007135F9 /* Recursion */,
 			);
@@ -91,6 +94,15 @@
 				4F3AE00128B8F22200072FC9 /* L14_N_Queens.playground */,
 			);
 			path = Recursion;
+			sourceTree = "<group>";
+		};
+		4FA5A9CB2966A8D000A5FE0C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4FA5A9CD2967E22600A5FE0C /* Rough.playground */,
+				4FA5A9CC2966A90300A5FE0C /* GCD.playground */,
+			);
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		4FC7337F28868D74005E9626 /* DP */ = {
