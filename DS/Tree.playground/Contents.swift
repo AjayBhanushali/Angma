@@ -1,5 +1,131 @@
 import Foundation
 
+print("sdf")
+struct Queue<T> {
+    private var array: [T] = []
+    init() {}
+    
+    @discardableResult
+    mutating func enqueue(_ element: T) -> Bool {
+        array.append(element)
+        return true
+    }
+    
+    mutating func dequeue() -> T? {
+        return (array.count == 0) ? nil : array.removeFirst()
+    }
+}
+class TreeNode<Value> {
+    var value: Value
+    var children: [TreeNode] = []
+    
+    init(_ value: Value) {
+        self.value = value
+    }
+
+    func add(_ child: TreeNode) {
+        children.append(child)
+    }
+    
+    // MARK: Depth First Traversal(uses recursion)
+    func forEachDepthFirst(_ visit: (TreeNode)->Void) {
+        visit(self)
+        
+        children.forEach { child in
+            child.forEachDepthFirst(visit)
+        }
+    }
+    
+    // MARK: Level Order Traversal(queue based)
+    func forEachLevelOrder(_ visit: (TreeNode)->Void) {
+        visit(self)
+        
+        var queue = Queue<TreeNode>()
+        
+        children.forEach {
+            queue.enqueue($0)
+        }
+        
+        while let node = queue.dequeue() {
+            visit(node)
+            node.children.forEach {
+                queue.enqueue($0)
+            }
+        }
+    }
+}
+
+let soda = TreeNode("Soda")
+let milk = TreeNode("Milk")
+
+let coffee = TreeNode("coffee")
+let tea = TreeNode("tea")
+
+let cold = TreeNode("cold")
+let hot = TreeNode("hot")
+
+let drinks = TreeNode("drinks")
+
+hot.add(tea)
+hot.add(coffee)
+
+cold.add(soda)
+cold.add(milk)
+
+drinks.add(hot)
+drinks.add(cold)
+
+print("Depth First Traversal")
+drinks.forEachDepthFirst {
+    print($0.value)
+}
+
+print("Level Order Traversal")
+drinks.forEachLevelOrder {
+    print($0.value)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 struct Person {
     var name: String
 
@@ -13,7 +139,7 @@ struct Person {
 }
 
 let person = Person(name: "Ed")
-person.makeAnonymous()
+//person.makeAnonymous()
 person.dance()
 print(person.name)
 
@@ -178,13 +304,6 @@ func sortinON(array: [Int]) -> [Int] {
 
 sortinON(array: [0, 1, 0, 1, 0, 0, 1, 1, 1, 0])
 
-
-func sort0n1(arrat: [Int]) -> [Int] {
-    var p1 = 0
-    var p2 = 0
-    
-}
-
 func isItThere(array: [Int], x: Int) -> Bool {
     var visited: [Int:Int] = [:]
     
@@ -220,14 +339,17 @@ func run() {
 
 run()
 
+//if let name {
+//    print("Hello, \(name)!")
+//}
 
-let scores = [100, 80, 85]
-
-let results = scores.map { score in
-    if score >= 85 {
-        return "\(score)%: Pass"
-    } else {
-        return "\(score)%: Fail"
-    }
-}
+//let scores = [100, 80, 85]
+//
+//let results = scores.map { score in
+//    if score >= 85 {
+//        return "\(score)%: Pass"
+//    } else {
+//        return "\(score)%: Fail"
+//    }
+//}
 

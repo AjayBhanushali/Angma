@@ -1,90 +1,319 @@
 import Foundation
+// MARK: Serial Queue: Sync{Sync{}} DEADLOCK
+//let serialQueue1 = DispatchQueue(label: "serial.sync.i.sync")
+//
+//// Sync Block 1
+//// Note: Serial Queue:
+//// > Serial Queue: executes one task at a time in order
+//// > For instance, if serial queue = [T1, T2], start T1>End T1>start T2>End T2
+//
+//// Note: Sync
+//// Returns control after the task is completed
+//// T1
+//serialQueue1.sync { // Queue started running sync T1
+//    print("Only this line will get executed")
+//    serialQueue1.sync { // sync T2 want to execute now but we are on a serial queue which is already executing T1. HERE, T2 is not letting T1 execute the rest of the code. Hence it is creating a deadlock
+//        print("Deadlock")
+//    }
+//    print("This won't run")
+//}
+//print("This won't run")
 
-// Sync Queue
-//print("Sync Queue")
-//print("a")
-//print(Thread.isMainThread)
-//DispatchQueue.global().sync {
-//    print(Thread.isMainThread)
-//    print("b")
-//}
-//print("c")
+// MARK: Serial Queue: Sync{Async{}}
+//let serialQueue2 = DispatchQueue(label: "serial.sync.i.async")
+//serialQueue2.sync { // Queue started running sync T1 | Queue = [T1]
 //
-//// Async Queue
-//print("Async Queue")
-//print("a")
-//print(Thread.isMainThread)
-//DispatchQueue.global().async {
-//    print(Thread.isMainThread)
-//    print("b")
-//}
-//print("c")
+//    print("This line will get executed")
 //
+//    serialQueue2.async { // Async will *immediately* return the control Queue = [T1, T2]
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//print("This line will get printed After A and parallel to B")
+
+
+// MARK: Serial Queue: Async{Async{}}
+//let serialQueue3 = DispatchQueue(label: "serial.async.i.async")
+//serialQueue3.async { // Async will *immediately* return the control | Queue started running async T1 | Queue = [T1]
+//
+//    print("This line will get executed")
+//
+//    serialQueue3.async { // Async will *immediately* return the control | Queue = [T1, T2]
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//print("This will print parallel to T1 | T2 will execute after T1 completes because it is performed in a serial queue")
+
+// MARK: Serial Queue: Async{sync{}} DEADLOCK
+//let serialQueue4 = DispatchQueue(label: "serial.async.i.sync")
+//serialQueue4.async { // Async will *immediately* return the control | Queue started running async T1 | Queue = [T1]
+//
+//    print("This line will get executed")
+//
+//    serialQueue4.sync { // Sync T2 want to execute now but we are on a serial queue which is already executing T1. HERE, T2 is not letting T1 execute the rest of the code. Hence it is creating a deadlock for serial queue not the main queue
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//print("This line will great printed as it on main thread")
+
+// MARK: Serial Queue: sync{} sync{}
+
+//let serialQueue5 = DispatchQueue(label: "serial.sync.sync")
+//serialQueue5.sync { //  Queue = [T1]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//serialQueue5.sync { // queue = [T2]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//
+//print("Everything will be printed in order")
+
+// MARK: Serial Queue: sync{} async{}
+//let serialQueue5 = DispatchQueue(label: "serial.sync.async")
+//serialQueue5.sync { //  Queue = [T1]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//serialQueue5.async { // queue = [T2]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//print("C")
+//print("First A then (B and C parallel)")
+
+// MARK: Serial Queue: async{} async{}
+//let serialQueue5 = DispatchQueue(label: "serial.async.async")
+//serialQueue5.async { //  Queue = [T1]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//serialQueue5.async { // queue = [T1, T2]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//print("C")
+//print("(First A & C Parrallel) After A finishes B will start")
+
+// MARK: Serial Queue: async{} sync{}
+//let serialQueue5 = DispatchQueue(label: "serial.async.sync")
+//serialQueue5.async { //  Queue = [T1]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//serialQueue5.sync { // queue = [T1, T2]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//print("C")
+//print("A > B > C")
+
+// MARK: Concurrent Queue: Sync{Sync{}}
+//let conQueue1 = DispatchQueue(label: "concurrent.sync.in.sync", attributes: .concurrent)
+//conQueue1.sync { //  Queue = [T1]
+//
+//    conQueue1.sync { // queue = [T1, T2]
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//print("C")
+//print("B > A > C")
+
+// MARK: Concurrent Queue: Sync{Async{}}
+//let conQueue2 = DispatchQueue(label: "concurrent.sync.in.async", attributes: .concurrent)
+//conQueue2.sync { //  Queue = [T1]
+//
+//    conQueue2.async { // queue = [T1, T2]
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//print("C")
+//print("(A parallel B) > C will be print after T1 is over not T2")
+
+// MARK: Concurrent Queue: Async{Async{}}
+//let conQueue3 = DispatchQueue(label: "concurrent.async.in.async", attributes: .concurrent)
+//conQueue3.async { //  Queue = [T1e]
+//
+//    conQueue3.async { // queue = [T1e, T2e]
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//print("C")
+//print("A || B || C")
+
+
+// MARK: Concurrent Queue: Async{sync{}}
+//let conQueue4 = DispatchQueue(label: "concurrent.async.in.sync", attributes: .concurrent)
+//conQueue4.async { //  Queue = [T1e]
+//
+//    conQueue4.sync { // queue = [T1e, T2e]
+//        for i in 0...50 {
+//            print("B \(i)------")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//print("C")
+//print("(B > A) || C")
+
+// MARK: Concurrent Queue: sync{} sync{}
+//let conQueue5 = DispatchQueue(label: "concurrent.sync.sync", attributes: .concurrent)
+//conQueue5.sync { //  Queue = [T1e]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//conQueue5.sync { // queue = [T2e]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//
+//print("C")
+//print("A > B > C")
+
+// MARK: Concurrent Queue: sync{} async{}
+//let conQueue6 = DispatchQueue(label: "concurrent.sync.async", attributes: .concurrent)
+//conQueue6.sync { //  Queue = [T1e]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//conQueue6.async { // queue = [T2e]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//
+//print("C")
+//print("A > (B || C)")
+
+// MARK: Concurrent Queue: async{} async{}
+//let conQueue7 = DispatchQueue(label: "concurrent.async.async", attributes: .concurrent)
+//conQueue7.async { //  Queue = [T1e]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//conQueue7.async { // queue = [T2e]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//
+//print("C")
+//print("A || B || C")
+
+// MARK: Concurrent Queue: async{} sync{}
+//let conQueue8 = DispatchQueue(label: "concurrent.async.sync", attributes: .concurrent)
+//conQueue8.async { //  Queue = [T1e]
+//    for i in 0...50 {
+//        print("A \(i)")
+//    }
+//}
+//
+//conQueue8.sync { // queue = [T2e]
+//    for i in 0...50 {
+//        print("B \(i)------")
+//    }
+//}
+//
+//print("C")
+//print("(B > C) || A")
+
+//===================================
+
 // MARK: Serial Queue
-//let serialQueue = DispatchQueue(label: "SerialQueue")
+//let serialQueue = DispatchQueue(label: "SerialQueue", attributes: [])
+//
 //print("1st Statement")
-//serialQueue.async {
-//    print(Thread.isMainThread)
-////    for i in 0...5 {
-////        print("ASYNC Serial queue \(i)")
-////    }
-//    print("ASYNC Serial queue 1")
-//    print("ASYNC Serial queue 2")
-//    print("ASYNC Serial queue 3")
-//    print("ASYNC Serial queue 4")
-//    print("ASYNC Serial queue 5")
+//serialQueue.sync {
+//    print("Start")
+//    serialQueue.async {
+//        for i in 0...50 {
+//            print("B \(i)")
+//        }
+//    }
+//
+//    for i in 0...50 {
+//        print("A \(i) ---------------")
+//    }
 //}
+//
 //print("2nd Statement")
 //print("3nd Statement")
 //print("4nd Statement")
 //print("5nd Statement")
 
-//serialQueue.async {
-//    print("ASYNC Serial queue 6")
-//    print("ASYNC Serial queue 7")
-//    print("ASYNC Serial queue 8")
-//    print("ASYNC Serial queue 9")
-//    print("ASYNC Serial queue 10")
-//    print("ASYNC Serial queue 11")
-//}
-//serialQueue.sync {
-//    print(Thread.isMainThread)
-//    for i in 0...5 {
-//        print("SYNC Serial queue \(i)")
-//    }
-//}
-//print("End of serial queue")
-//print("----------------------------------------")
-//
-//let concurrentQueue = DispatchQueue(label: "ConcurrentQueue", attributes: .concurrent)
-//print("1st Statement")
-//concurrentQueue.sync {
-//    print(Thread.isMainThread)
-//    for i in 0...5 {
-//        print("ASYNC concurrent queue \(i)")
-//    }
-//}
-//print("2nd Statement")
-//
-//concurrentQueue.async {
-//    print(Thread.isMainThread)
-//    for i in 0...5 {
-//        print("SYNC concurrent queue \(i)")
-//    }
-//}
-//print("End of concurrent queue")
-//print("----------------------------------------")
-
 // MARK: Deadlocks in Queues
 
-// 1. In concurrent computing, a deadlock is a state in which each member of a group is waiting for another member, including itself, to take action
+// 1. In serial computing, a deadlock is a state in which each member of a group is waiting for another member, including itself, to take action
 
 //func testGCD() {
 //    print("1")
-//    DispatchQueue.main.async {
+//    DispatchQueue.main.async { //[T1e]
 //        print("2")
 //
-//        DispatchQueue.main.sync {
+//        DispatchQueue.main.sync { // [T1e, T2]
 //            print("3")
 //        }
 //
@@ -95,28 +324,18 @@ import Foundation
 
 //testGCD()
 
-// 2. Deadlock because of sync dispatches
-//let serialDLqueue = DispatchQueue(label: "Serial deadlock Queue")
-//serialDLqueue.async {
-//    print("a")
-//    serialDLqueue.sync {
-//        print("b")
-//    }
-//    print("c")
-//}
-//print("d")
-
 // MARK: WorkItems
 //let workItem = DispatchWorkItem {
 //    for i in 0...3 {
 //        print(i)
 //    }
 //}
-//DispatchQueue.global( ).async {
+//
+//DispatchQueue.global().async {
 //    workItem.perform()
 //}
 //
-//DispatchQueue.main.async{
+//DispatchQueue.main.async {
 //    workItem.perform()
 //}
 //
@@ -268,10 +487,10 @@ import Foundation
 // MARK: Dispatch Semaphore
 //print("Dispatch Semaphore")
 //let queue = DispatchQueue(label: "com.gcd.dispatchSemaphore", attributes: .concurrent)
-//let semaphore = DispatchSemaphore(value: 0)
+//let semaphore = DispatchSemaphore(value: 1)
 //var sharedResource = [Int]()
 //
-////semaphore.wait() // 0
+//semaphore.wait() // 0
 //queue.async {
 //    for i in 0...3 {
 //        sharedResource.append(i)
@@ -279,30 +498,30 @@ import Foundation
 //    semaphore.signal() // 1
 //}
 //
-//semaphore.wait() // 0
+//semaphore.wait() // -1 0
 //queue.async {
 //    for i in 4...7 {
 //        sharedResource.append(i)
 //    }
-//    semaphore.signal() // 1
+//    semaphore.signal() // 0
 //}
 //
-//semaphore.wait() // 0
+//semaphore.wait() // -1 0
 //
 //queue.async {
 //    for i in 8...10 {
-//        sharedResource.append(i) // 1
+//        sharedResource.append(i)
 //    }
 //    semaphore.signal() // 0
 //}
 //
-//semaphore.wait() // 1
+//semaphore.wait() // -1 0
 //print(sharedResource)
 
-struct a {
-    var g: b
-}
-
-struct b {
-    var a: a
-}
+//struct a {
+//    var g: b
+//}
+//
+//struct b {
+//    var a: a
+//}

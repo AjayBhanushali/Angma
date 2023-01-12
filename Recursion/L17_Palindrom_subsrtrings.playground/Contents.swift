@@ -73,5 +73,5 @@ func palindromePartioning(str: String) -> [[String]] {
     return result
 }
 
-print(palindromePartioning(str: "aabb"))
+print(palindromePartioning(str: "bbabbbba"))
 
