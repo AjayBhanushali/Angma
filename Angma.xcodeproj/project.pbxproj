@@ -39,6 +39,7 @@
 		B18ABFDE296E6FB10056F8ED /* Tree.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tree.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B1F9A3C52971293F00116BB3 /* StructuralDecorator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralDecorator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B1F9A3C62971326200116BB3 /* StructuralAdapter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralAdapter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B1F9A3C72971449000116BB3 /* ARC.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ARC.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -104,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B1F9A3C32971253E00116BB3 /* Design Pattern */,
+				B1F9A3C72971449000116BB3 /* ARC.playground */,
 				4FA5A9CD2967E22600A5FE0C /* Rough.playground */,
 				4FA5A9CC2966A90300A5FE0C /* GCD.playground */,
 			);
