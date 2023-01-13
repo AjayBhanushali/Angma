@@ -37,6 +37,8 @@
 		4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_16_min_difference.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FFE5B0228D3909E00FDF7F0 /* L17_Palindrom_subsrtrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L17_Palindrom_subsrtrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B18ABFDE296E6FB10056F8ED /* Tree.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tree.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B1F9A3C52971293F00116BB3 /* StructuralDecorator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralDecorator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B1F9A3C62971326200116BB3 /* StructuralAdapter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralAdapter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -101,6 +103,7 @@
 		4FA5A9CB2966A8D000A5FE0C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				B1F9A3C32971253E00116BB3 /* Design Pattern */,
 				4FA5A9CD2967E22600A5FE0C /* Rough.playground */,
 				4FA5A9CC2966A90300A5FE0C /* GCD.playground */,
 			);
@@ -130,6 +133,15 @@
 				B18ABFDE296E6FB10056F8ED /* Tree.playground */,
 			);
 			path = DS;
+			sourceTree = "<group>";
+		};
+		B1F9A3C32971253E00116BB3 /* Design Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				B1F9A3C62971326200116BB3 /* StructuralAdapter.playground */,
+				B1F9A3C52971293F00116BB3 /* StructuralDecorator.playground */,
+			);
+			path = "Design Pattern";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -13,7 +13,7 @@ struct Person {
 }
 
 let person = Person(name: "Ed")
-person.makeAnonymous()
+//person.makeAnonymous()
 person.dance()
 print(person.name)
 
@@ -230,4 +230,33 @@ let results = scores.map { score in
         return "\(score)%: Fail"
     }
 }
+
+===
+import Foundation
+
+// Decorator Pattern
+// Dynamically modifies the behavior of a core object WITHOUT changing its existing functionality
+// BEHAVIOUR MODIFICATION & ACHIEVED DYNAMICALLY
+
+protocol Transporting {
+    func getSpeed() -> Double
+    func getTraction() -> Double
+}
+
+final class RaceCar: Transporting {
+    private var speed: Double = 10
+    private var traction: Double = 10
+    
+    func getSpeed() -> Double {
+        return speed
+    }
+    
+    func getTraction() -> Double {
+        return traction
+    }
+}
+
+let car = RaceCar()
+car.getSpeed()
+car.getTraction()
 
