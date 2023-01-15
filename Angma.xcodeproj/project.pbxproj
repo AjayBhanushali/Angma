@@ -40,6 +40,7 @@
 		B1F9A3C52971293F00116BB3 /* StructuralDecorator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralDecorator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B1F9A3C62971326200116BB3 /* StructuralAdapter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralAdapter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B1F9A3C72971449000116BB3 /* ARC.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ARC.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B1F9A3C92974014700116BB3 /* Graph.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Graph.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -132,6 +133,7 @@
 		B18ABFDD296E6F740056F8ED /* DS */ = {
 			isa = PBXGroup;
 			children = (
+				B1F9A3C82974010600116BB3 /* Graph */,
 				B18ABFDE296E6FB10056F8ED /* Tree.playground */,
 			);
 			path = DS;
@@ -144,6 +146,14 @@
 				B1F9A3C52971293F00116BB3 /* StructuralDecorator.playground */,
 			);
 			path = "Design Pattern";
+			sourceTree = "<group>";
+		};
+		B1F9A3C82974010600116BB3 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				B1F9A3C92974014700116BB3 /* Graph.playground */,
+			);
+			path = Graph;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
