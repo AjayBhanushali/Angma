@@ -6,6 +6,287 @@ struct Edge {
     let weight: Int
 }
 
+// Number of Distinct Islands
+func noOfDistinctIslands(graph: [[Int]]) -> Int {
+    let land = 1
+    var noOfCols = graph[0].count
+    var noOfRows = graph.count
+    var visitedGraph = Array(repeating: Array(repeating: false, count: noOfCols), count: noOfRows)
+    var distinctIslands = Set<[[Int]]>()
+    var dPoints = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+    for row in 0..<noOfRows {
+        for col in 0..<noOfCols {
+            if graph[row][col] == land, !visitedGraph[row][col] {
+                var map: [[Int]] = []
+                dfs(row: row, col: col, bRow: row, bCol: col, map: &map)
+                distinctIslands.insert(map)
+            }
+        }
+    }
+    
+    func dfs(row: Int, col: Int, bRow: Int, bCol: Int, map: inout [[Int]]) {
+        visitedGraph[row][col] = true
+        var diffRow = bRow - row
+        var diffCol = bCol - col
+        
+        map.append([diffRow, diffCol])
+        
+        for dPoint in dPoints {
+            let dRow = row + dPoint.0
+            let dCol = col + dPoint.1
+            
+            if dRow >= 0, dRow < noOfRows, dCol >= 0, dCol < noOfCols, graph[dRow][dCol] == land, !visitedGraph[dRow][dCol] {
+                dfs(row: dRow, col: dCol, bRow: bRow, bCol: bCol, map: &map)
+            }
+        }
+    }
+    
+    return distinctIslands.count
+}
+
+noOfDistinctIslands(graph: [
+    [1, 1, 0, 0, 0],
+    [1, 0, 0, 1, 1],
+    [1, 0, 0, 1, 0],
+    [0, 0, 0, 1, 0]
+])
+// Number of enclaves
+// Objective is to go through borders first, find land there and its connected land, mark them visited
+// Once it is completed, iterate through graph and look for non visited land
+// https://www.youtube.com/watch?v=rxKcepXQgU4&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=15
+func noOfEnclave(graph: [[Int]]) -> Int {
+    let land = 1
+    var newGraph = graph
+    let noOfRows = graph.count
+    let noOfCols = graph[0].count
+    var visitedGraph = Array(repeating: Array(repeating: false, count: noOfCols), count: noOfRows)
+    let dPoints = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+    var queue: [(Int, Int)] = []
+    
+    // Check for land in 1st and last row
+    for col in 0..<noOfCols {
+        if newGraph[0][col] == land, !visitedGraph[0][col] {
+            visitedGraph[0][col] = true
+            queue.append((0, col))
+        }
+        
+        let row = noOfRows-1
+        
+        if newGraph[row][col] == land, !visitedGraph[row][col] {
+            visitedGraph[row][col] = true
+            queue.append((row, col))
+        }
+    }
+    
+    // Now check for land in 1st and last col
+    for row in 0..<noOfRows {
+        if newGraph[row][0] == land, !visitedGraph[row][0] {
+            visitedGraph[row][0] = true
+            queue.append((row, 0))
+        }
+        
+        let col = noOfCols-1
+        
+        if newGraph[row][col] == land, !visitedGraph[row][col] {
+            visitedGraph[row][col] = true
+            queue.append((row, col))
+        }
+    }
+    
+    while !queue.isEmpty {
+        let location = queue.removeFirst()
+        
+        for dPoint in dPoints {
+            let dRow = location.0 + dPoint.0
+            let dCol = location.1 + dPoint.1
+            
+            if dRow >= 0, dRow < noOfRows, dCol >= 0, dCol < noOfCols, newGraph[dRow][dCol] == land, !visitedGraph[dRow][dCol] {
+                visitedGraph[dRow][dCol] = true
+                queue.append((dRow, dCol))
+            }
+            
+        }
+    }
+    
+    var noOfEnclave = 0
+    
+    for row in 0..<noOfRows {
+        for col in 0..<noOfCols {
+            if newGraph[row][col] == land, !visitedGraph[row][col] {
+                noOfEnclave += 1
+            }
+        }
+    }
+    return noOfEnclave
+}
+
+noOfEnclave(graph: [
+    [0, 0, 0, 0],
+    [1, 0, 1, 0],
+    [0, 1, 1, 0],
+    [0, 0, 0, 0]
+])
+
+noOfEnclave(graph: [
+    [0, 0, 0, 1],
+    [0, 1, 1, 0],
+    [0, 1, 1, 0],
+    [0, 0, 0, 1],
+    [0, 1, 1, 0]
+])
+
+noOfEnclave(graph: [
+    [0, 0, 1, 1],
+    [0, 1, 1, 0],
+    [0, 1, 1, 0],
+    [0, 0, 0, 1],
+    [0, 1, 1, 0]
+])
+
+// Replace O's with X's
+// https://www.youtube.com/watch?v=BtdgAys4yMk&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=14
+func replaceOX(graph: [[String]]) {
+    let oh = "O"
+    var newGraph = graph
+    let noOfRows = graph.count
+    let noOfCols = graph[0].count
+    var visitedGraph = Array(repeating: Array(repeating: false, count: noOfCols), count: noOfRows)
+    let dPoints = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+    // Check for O in First and Last row
+    for col in 0..<noOfCols {
+        if newGraph[0][col] == oh && !visitedGraph[0][col] {
+            dfs(row: 0, col: col)
+            print("(0, \(col))")
+        }
+        
+        if newGraph[noOfRows-1][col] == oh && !visitedGraph[noOfRows-1][col] {
+            dfs(row: noOfRows-1, col: col)
+            print("(\(noOfRows-1), \(col))")
+        }
+    }
+    
+    // Check for O in First and Last col
+    for row in 0..<noOfRows {
+        if newGraph[row][0] == oh && !visitedGraph[row][0] {
+            dfs(row: row, col: 0)
+            print("(\(row), 0)")
+        }
+        
+        if newGraph[row][noOfCols-1] == oh && !visitedGraph[row][noOfCols-1] {
+            dfs(row: row, col: noOfCols-1)
+            print("(\(row), \(noOfCols-1)")
+        }
+    }
+    
+    for row in 0..<noOfRows {
+        for col in 0..<noOfCols {
+            if newGraph[row][col] == oh && !visitedGraph[row][col] {
+                newGraph[row][col] = "X"
+            }
+        }
+    }
+    
+    
+    func dfs(row: Int, col: Int) {
+        visitedGraph[row][col] = true
+        
+        for dPoint in dPoints {
+            let dRow = row + dPoint.0
+            let dCol = col + dPoint.1
+            
+            if dRow >= 0, dRow < noOfRows, dCol >= 0, dCol < noOfCols, newGraph[dRow][dCol] == oh, !visitedGraph[dRow][dCol] {
+                dfs(row: dRow, col: dCol)
+            }
+        }
+    }
+    
+    for line in newGraph {
+        print(line)
+    }
+}
+
+replaceOX(graph: [["X", "X", "X", "X"], 
+                  ["X", "O", "X", "X"],
+                  ["X", "O", "O", "X"],
+                  ["X", "O", "X", "X"],
+                  ["X", "X", "O", "O"]])
+
+// https://www.youtube.com/watch?v=edXdVwkYHF8&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=13
+func nearest(graph: [[Int]]) {
+    var newGraph = graph
+    let noOfRows = graph.count
+    let noOfCols = graph[0].count
+    var visitedGraph = Array(repeating: Array(repeating: false, count: noOfCols), count: noOfRows)
+    var queue: [(Int, Int, Int)] = []
+    let dPoints = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+    
+    for i in 0..<noOfRows {
+        for j in 0..<noOfCols {
+            if graph[i][j] == 1 {
+                visitedGraph[i][j] = true
+                queue.append((i,j,0))
+                print((i,j,0))
+            }
+        }
+    }
+    
+    while !queue.isEmpty {
+        let cell = queue.removeFirst()
+        newGraph[cell.0][cell.1] = cell.2
+        
+        for dPoint in dPoints {
+            let dRow = cell.0 + dPoint.0
+            let dCol = cell.1 + dPoint.1
+            if dRow >= 0 && dRow < noOfRows && dCol >= 0 && dCol < noOfCols && !visitedGraph[dRow][dCol] && newGraph[dRow][dCol] == 0 {
+                queue.append((dRow, dCol, cell.2 + 1))
+                print((dRow, dCol, cell.2 + 1))
+                visitedGraph[dRow][dCol] = true
+            }
+        }
+    }
+    
+    print(newGraph)
+}
+//nearest(graph: [[0,1,1,0], [1,1,0,0], [0,0,1,1]])
+nearest(graph: [[1,0,1], [1,1,0], [1,0,0]])
+
+//https://www.youtube.com/watch?v=BPlrALf1LDU&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=11
+func isCycle(adjList: [[Int]], n: Int) -> Bool {
+    
+    var visitedNodes = Array(repeating: false, count: n)
+    var queue: [(Int, Int)] = []
+    
+    for i in 0..<n {
+        if !visitedNodes[i] {
+            if bfs(node: i, parent: -1) {
+                return true
+            }
+        }
+    }
+    
+    func bfs(node: Int, parent: Int) -> Bool {
+        visitedNodes[node] = true
+        queue.append((node, parent))
+        
+        while !queue.isEmpty {
+            let currentNode = queue.removeFirst()
+            for node in adjList[currentNode.0] {
+                if !visitedNodes[node] {
+                    visitedNodes[currentNode.0] = true
+                    queue.append((node, currentNode.0))
+                } else if currentNode.1 != node {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+    return false
+}
+
+isCycle(adjList: [[1], [0,2,4], [1,3], [2,4], [1,3]], n: 5)
+isCycle(adjList: [[], [2,3], [1,3], [1,2]], n: 4)
+//https://www.youtube.com/watch?v=yf3oUhkvqA0&list=PLgUwDviBIf0oE3gA41TKO2H5bHpPd7fzn&index=10
 func rottenOranges(bucket: [[Int]]) -> Int {
     var newBucket = bucket
     var noOfCols = bucket[0].count
