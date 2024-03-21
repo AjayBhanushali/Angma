@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>DP_10_Grid_Unique_Paths copy (Playground) 1.xcscheme</key>
 		<dict>
@@ -163,7 +163,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>5</integer>
 		</dict>
 		<key>DP_15_Partition_Equal_Subset (Playground) 1.xcscheme</key>
 		<dict>
@@ -226,7 +226,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>DP_17_find_ways (Playground) 1.xcscheme</key>
 		<dict>
@@ -310,7 +310,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>0</integer>
 		</dict>
 		<key>DP_25_27_lcs (Playground) 1.xcscheme</key>
 		<dict>
@@ -443,7 +443,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>3</integer>
 		</dict>
 		<key>DP_35_36_BuySell (Playground).xcscheme</key>
 		<dict>
@@ -541,7 +541,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>7</integer>
 		</dict>
 		<key>Graph (Playground).xcscheme</key>
 		<dict>
@@ -604,7 +604,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>2</integer>
 		</dict>
 		<key>L12_Permutation (Playground).xcscheme</key>
 		<dict>
@@ -632,7 +632,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>9</integer>
 		</dict>
 		<key>L16_M_colors (Playground) 1.xcscheme</key>
 		<dict>
@@ -674,7 +674,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>1</integer>
 		</dict>
 		<key>L6_L7_Subsequence (Playground).xcscheme</key>
 		<dict>
@@ -716,7 +716,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Pick_Unpick (Playground) 1.xcscheme</key>
 		<dict>
@@ -744,7 +744,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>10</integer>
+		</dict>
+		<key>SlidingWindow (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>11</integer>
 		</dict>
 		<key>StructuralAdapter (Playground).xcscheme</key>
 		<dict>

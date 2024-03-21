@@ -3,15 +3,15 @@ print("rr")
 func findMaxInSubArray(array: [Int], k: Int) -> Int {
     var i = 0
     var j = 0
-    var max = 0
-    var sum = 0
+    var maxi: Int = 0
+    var sum: Int = 0
     
     while j < k {
         sum += array[j]
-        j++
+        j+=1
     }
     
-    max = sum
+    maxi = sum
     
     while j < array.count {
         sum -= array[i]
@@ -19,33 +19,10 @@ func findMaxInSubArray(array: [Int], k: Int) -> Int {
         j += 1
         sum += array[j]
         
-        max = max(max, sum)
+        maxi = max(maxi, sum)
     }
     
-    return max
+    return maxi
 }
-
-int i = 0;
-        int j = 0;
-
-    int max = 0;
-    int sum = 0;
-
-    while (j < K) {
-        sum += Arr.get(j);
-        j++;
-    }
-
-    max = sum;
-
-    while (j < N) {
-        sum = sum - Arr.get(i);
-        sum = sum + Arr.get(j);
-        i++;
-        j++;
-        max = Math.max(max, sum);
-    }
-
-    return max;
-
+findMaxInSubArray(array: [2,3,4,5,6,7,8], k: 3)
 
