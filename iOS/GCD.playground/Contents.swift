@@ -1,7 +1,130 @@
 import Foundation
+
+//MARK: ARC 1
+//class Person {
+//    var name: String?
+//    var card: Card?
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//
+//    deinit {
+//        print("\(name ?? "") is deinitialised")
+//    }
+//}
+//
+//class Card {
+//    var cardName: String
+//    unowned var person: Person
+//
+//    init(cardName: String, person: Person) {
+//        self.person = person
+//        self.cardName = cardName
+//    }
+//
+//    deinit {
+//        print("\(cardName) is deinitialised")
+//    }
+//}
+//
+//var raj: Person? = Person(name: "Raj")
+//var paytmCard: Card? = Card(cardName: "Paytm Card", person: raj!)
+//
+//raj?.card = paytmCard
+//
+//paytmCard = nil
+//
+//print(raj?.card?.cardName)
+//print(paytmCard)
+
+// MARK: Struct vs Class
+// EXMPLE 1
+//class Person {
+//    var name: String?
+//    var card: Card?
+//
+//    init(name: String) {
+//        self.name = name
+//    }
+//}
+//
+//struct Card {
+//    var cardName: String
+//    var person: Person
+//
+//    init(cardName: String, person: Person) {
+//        self.person = person
+//        self.cardName = cardName
+//    }
+//}
+//
+//var raj: Person? = Person(name: "Raj")
+//var paytmCard: Card? = Card(cardName: "Paytm Card", person: raj!)
+//
+//raj?.card = paytmCard
+//
+//raj?.card?.cardName = "Debit Card"
+//
+//paytmCard?.person.name = "Yash"
+//
+//print(raj?.name)
+//print(raj?.card?.cardName)
+//
+//print(paytmCard?.cardName)
+//print(paytmCard?.person.name)
+
+// EXMPLE 2
+//struct A {
+//    var b: B?
+//}
+//
+//struct B {
+//    var a: A?
+//}
+//
+//var a = A()
+//var b = B()
+//
+//a.b = b
+//b.a = a
+
+// MARK: Closures
+
+//var i = 0
+//var closureArray: [()->()] = []
+//
+//for _ in 1...5 {
+//    closureArray.append { [i] in
+//        print(i)
+//    }
+//    i+=1
+//}
+//
+//closureArray[0]()
+//closureArray[1]()
+//closureArray[2]()
+//
+//print("i is \(i)")
+
+
+
+//var i = 0
+//var closureArray: [()->()] = []
+//
+//for _ in 1...5 {
+//    closureArray.append { [i] in
+//        print(i)
+//    }
+//    i+=1
+//}
+//
+//closureArray[0]()
+//print("i is \(i)")
+
+// MARK: GCD
 // MARK: Serial Queue: Sync{Sync{}} DEADLOCK
 //let serialQueue1 = DispatchQueue(label: "serial.sync.i.sync")
-//
 //// Sync Block 1
 //// Note: Serial Queue:
 //// > Serial Queue: executes one task at a time in order
@@ -340,6 +463,34 @@ import Foundation
 //}
 //
 //workItem.cancel()
+// ====>WorkItem for seach
+//var currentWorkItem: DispatchWorkItem?
+//
+//func getDataFor(searchString: String) {
+//
+//    currentWorkItem?.cancel()
+//
+//    let dispatchWorkItem = DispatchWorkItem {
+//        print("DThread: \(Thread.isMainThread)")
+//        print(searchString)
+//    }
+//
+//    currentWorkItem = dispatchWorkItem
+//
+//    currentWorkItem?.notify(queue: .main, execute: {
+//        print("TO Thread: \(Thread.isMainThread)")
+//    })
+//
+//    DispatchQueue.global().asyncAfter(deadline: .now() + 2, execute: dispatchWorkItem)
+//}
+//
+//
+//
+//getDataFor(searchString: "A")
+//sleep(3)
+//getDataFor(searchString: "AB")
+//sleep(1)
+//getDataFor(searchString: "ABC")
 
 // MARK: DispatchGroup - wait
 //print("starting long running tasks")
@@ -364,7 +515,7 @@ import Foundation
 //print("all tasks done!")
 
 // MARK: DispatchGroup - wait(), wait() in concurrent, notify()
-//let queue = DispatchQueue (label: "com.company.app.queue", attributes: .concurrent)
+//let queue = DispatchQueue(label: "com.company.app.queue", attributes: .concurrent)
 //let group = DispatchGroup()
 //
 //group.enter()
@@ -382,28 +533,27 @@ import Foundation
 //    }
 //    group.leave()
 //}
-
-
+//
 //// This blocks the current thread(in our case its main) as well
 //group.wait()
 //print("alopha")
 //
-/// Now it will block background thread and not the main one hence, rest of the code execute.
+//// Now it will block background thread and not the main one hence, rest of the code execute.
 //queue.async {
 //    group.wait()
 //    print("alopha")
 //}
-
-/// NOTIFY
+//
+//// NOTIFY
 //group.notify(queue: DispatchQueue.main) {
 //    print("all tasks done!")
 //}
-
+//
 //print(Thread.isMainThread)
 //for i in 0...70 {
 //    print("MAIN \(i)")
 //}
-//
+
     
 // MARK: DispatchGroup - notify()
 //print("starting long running tasks")
