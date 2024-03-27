@@ -42,6 +42,7 @@ func isPalindrome(_ str: String) -> Bool {
         if str[l] != str[r] {
             return false
         }
+        
         l+=1
         r-=1
     }

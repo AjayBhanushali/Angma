@@ -8,7 +8,18 @@
 // Base case should return 1 or 0
 // At the end return sum of recursions
 
-
+//func fibbo(n: Int) -> Int {
+//    if n == 0 {
+//        return 0
+//    }
+//    if n == 1 {
+//        return 1
+//    }
+//    
+//    return fibbo(n: n-1) + fibbo(n: n-2)
+//}
+//
+//print(fibbo(n: 2))
 //L6: https://www.youtube.com/watch?v=AxNNVECce8c&list=PLgUwDviBIf0rGlzIn_7rsaR2FQ5e6ZOL9&index=6
 
 //MARK: Print all subsequences

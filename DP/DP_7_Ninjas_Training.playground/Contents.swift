@@ -1,3 +1,73 @@
+func ninja(tasks: [[Int]]) -> Int {
+    
+    var memo = Array(repeating: Array(repeating: -1, count: tasks[0].count), count: tasks.count)
+    
+    func rec(r: Int, lastC: Int) -> Int {
+        var maxPoints = Int.min
+        
+        if r == -1 {
+            return 0
+        }
+        
+        if lastC != -1 {
+            if memo[r][lastC] != -1 {
+                return memo[r][lastC]
+            }
+        }
+        
+        for c in 0..<tasks[r].count {
+            if lastC == c {
+                continue
+            }
+            let points = tasks[r][c] + rec(r: r-1, lastC: c)
+            maxPoints = max(maxPoints, points)
+        }
+        
+        if lastC != -1 {
+            memo[r][lastC] = maxPoints
+        }
+        
+        return maxPoints
+    }
+    
+    return rec(r: tasks.count-1, lastC: -1)
+}
+
+func ninjaTab(tasks: [[Int]]) -> Int {
+    
+    var lastMaxs: [Int] = Array(repeating: 0, count: tasks[tasks.count-1].count)
+    
+    for r in 0..<tasks.count {
+        var currentMaxs: [Int] = []
+        for c in 0..<tasks[r].count {
+            
+            var lastMax = 0
+            
+            for lastC in 0..<lastMaxs.count {
+                if lastC == c {
+                    continue
+                }
+                lastMax = max(lastMax, lastMaxs[lastC])
+            }
+            
+            let max = tasks[r][c] + lastMax
+            currentMaxs.append(max)
+        }
+        lastMaxs = currentMaxs
+    }
+    
+    return lastMaxs.max() ?? 0
+}
+
+print(ninja(tasks: [[1,2,5], [3,1,1], [3,3,3]]))
+print(ninja(tasks: [[1,2,5,9], [3,1,1,8], [3,6,3,3]]))
+print(ninja(tasks: [[-1]]))
+
+print(ninjaTab(tasks: [[1,2,5], [3,1,1], [3,3,3]]))
+print(ninjaTab(tasks: [[1,2,5,9], [3,1,1,8], [3,6,3,3]]))
+print(ninjaTab(tasks: [[-1]]))
+
+
 //DP_7: https://www.youtube.com/watch?v=AE39gJYuRog&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=8
 
 // MARK: Ninja's Training
@@ -122,3 +192,4 @@ func ninjaTrainingTabulization(tasks: [[Int]]) -> Int {
 
 //ninjaTrainingTabulization(tasks: [[1,2,5], [3 ,1 ,1] ,[3,3,3]])
 ninjaTrainingTabulization(tasks: [[3 ,3 ,1] ,[3, 3, 3], [1, 2, 5]])
+

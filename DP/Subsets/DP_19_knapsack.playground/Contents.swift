@@ -18,6 +18,69 @@
 // We will call recursion for the last index and the maxWeight
 // NOTE: DP[rows will be number array's count][but weights colums would be maxWeight + 1] because we have to maintain the ans for weight 0 as well in the DP
 
+// AB
+func ks(pr: [Int], wt: [Int], n: Int, w: Int) -> Int {
+    
+    var memo = Array(repeating: Array(repeating: -1, count: w+1), count: n)
+    
+    func recursion(r: Int, w: Int) -> Int {
+        if r == -1 || w == 0 { return 0 }
+        
+        if memo[r][w] != -1 { return memo[r][w] }
+        
+        var notPick = recursion(r: r-1, w: w)
+        var pick = 0
+        
+        if wt[r] <= w {
+            pick = pr[r] + recursion(r: r-1, w: w-wt[r])
+        }
+        
+        memo[r][w] = max(pick, notPick)
+        
+        return memo[r][w]
+    }
+    let ma = recursion(r: n-1, w: w)
+    memo.forEach({print($0)})
+    return ma
+}
+
+func ksTab(pr: [Int], wt: [Int], n: Int, w: Int) -> Int {
+    
+    var lastProfits = Array(repeating: 0, count: w+1)
+    
+    for i in 0...w {
+        if wt[0] <= i {
+            lastProfits[i] = pr[0]
+        }
+    }
+    
+    print(lastProfits)
+    for r in 1..<n {
+        var latestProfits = Array(repeating: 0, count: w+1)
+        
+        for i in 0...w {
+            var notPick = lastProfits[i]
+            var pick = 0
+            
+            if wt[r] <= i {
+                pick = pr[r] + lastProfits[i-wt[r]]
+            }
+            
+            latestProfits[i] = max(pick, notPick)
+        }
+        
+        lastProfits = latestProfits
+        print(lastProfits)
+    }
+    
+    return lastProfits[w]
+}
+
+
+//ks(pr: [1,3,10,4,7], wt: [1,3,7,4,5], n: 5, w: 7)
+//ksTab(pr: [1,3,10,4,7], wt: [1,3,8,4,5], n: 5, w: 7)
+
+//ksTab(pr: [1,3,10,4,7], wt: [1,3,7,4,5], n: 5, w: 7)
 // In Recursion,
 // Base Case
 // If ind = 0
@@ -57,8 +120,9 @@ func knapsack(weights: [Int], values: [Int], bagWeight: Int) -> Int {
         
         return dp[ind][maxWeight]
     }
-    
-    return recursion(ind: weights.count-1, maxWeight: bagWeight)
+    let ma = recursion(ind: weights.count-1, maxWeight: bagWeight)
+    dp.forEach({print($0)})
+    return ma
 }
 
 //print(knapsack(weights: [3,2,5], values: [40,30,60], bagWeight: 5))
@@ -78,7 +142,7 @@ func knapsack(weights: [Int], values: [Int], bagWeight: Int) -> Int {
 // outside weight loop
 // outside ind loop
 // return dp[maxWeight]
-
+print("===")
 func knapsackTab(weights: [Int], values: [Int], bagWeight: Int) -> Int {
     
     var dp = Array(repeating: 0, count: bagWeight+1)
@@ -86,7 +150,7 @@ func knapsackTab(weights: [Int], values: [Int], bagWeight: Int) -> Int {
     for weight in weights[0]...bagWeight {
         dp[weight] = values[0]
     }
-    
+    print(dp)
     for ind in 1..<weights.count {
         for maxWeight in stride(from: bagWeight, to: 0, by: -1) {
             var take = 0
@@ -95,9 +159,19 @@ func knapsackTab(weights: [Int], values: [Int], bagWeight: Int) -> Int {
             }
             dp[maxWeight] = max(take, dp[maxWeight])
         }
+        print(dp)
     }
     
     return dp[bagWeight]
 }
 
-print(knapsackTab(weights: [3,2,5], values: [40,30,60], bagWeight: 5))
+ks(pr: [1,4,5,7], wt: [1,3,4,5], n: 4, w: 7)
+print("====")
+print(knapsack(weights: [1,3,4,5], values: [1,4,5,7], bagWeight: 7))
+print("===========")
+ksTab(pr: [1,4,5,7], wt: [1,3,4,5], n: 4, w: 7)
+print("====")
+print(knapsackTab(weights: [1,3,4,5], values: [1,4,5,7], bagWeight: 7))
+
+
+//ksTab(pr: [1,4,5,7], wt: [1,3,4,5], n: 4, w: 7)
