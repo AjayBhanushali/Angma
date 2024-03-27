@@ -37,6 +37,7 @@
 		4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_16_min_difference.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FFE5B0228D3909E00FDF7F0 /* L17_Palindrom_subsrtrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L17_Palindrom_subsrtrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B116C7532BAACAF3003E2F59 /* SlidingWindow.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SlidingWindow.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		B13ED2982BB412BD00E2C2E5 /* LinkedList.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = LinkedList.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B18ABFDE296E6FB10056F8ED /* Tree.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tree.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B1F9A3C52971293F00116BB3 /* StructuralDecorator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralDecorator.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B1F9A3C62971326200116BB3 /* StructuralAdapter.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = StructuralAdapter.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -156,9 +157,18 @@
 			path = "Sliding Window";
 			sourceTree = "<group>";
 		};
+		B13ED2972BB412BD00E2C2E5 /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				B13ED2982BB412BD00E2C2E5 /* LinkedList.playground */,
+			);
+			path = LinkedList;
+			sourceTree = "<group>";
+		};
 		B18ABFDD296E6F740056F8ED /* DS */ = {
 			isa = PBXGroup;
 			children = (
+				B13ED2972BB412BD00E2C2E5 /* LinkedList */,
 				B1F9A3C82974010600116BB3 /* Graph */,
 				B18ABFDE296E6FB10056F8ED /* Tree.playground */,
 			);
