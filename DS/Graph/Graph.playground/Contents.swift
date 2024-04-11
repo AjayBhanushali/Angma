@@ -1,5 +1,101 @@
 import Foundation
 
+class Node<Value> {
+    var value: Value
+    var next: Node<Value>?
+    
+    init(value: Value, next: Node<Value>? = nil) {
+        self.value = value
+        self.next = next
+    }
+}
+
+struct LinkedList<Value> {
+    var head: Node<Value>?
+    var tail: Node<Value>?
+    
+    init() {}
+    
+    var isEmpty: Bool {
+        return head == nil
+    }
+    
+    mutating func push(_ value: Value) {
+        let newHead = Node(value: value, next: head)
+        
+        if tail == nil {
+            tail = head
+        }
+        
+        head = newHead
+    }
+    
+    mutating func append(_ value: Value) {
+        if isEmpty {
+            push(value)
+        }
+        
+        let newTail = Node(value: value)
+        tail?.next = newTail
+        tail = newTail
+    }
+}
+
+let node1 = Node(value: 1)
+let node2 = Node(value: 2)
+let node3 = Node(value: 3)
+let node4 = Node(value: 4)
+let node5 = Node(value: 5)
+
+node4.next = node5
+node3.next = node4
+node2.next = node3
+node1.next = node2
+
+var ll = LinkedList<Int>()
+ll.head = node1
+
+
+func reverseList<Value>(list: inout LinkedList<Value>) -> LinkedList<Value> {
+    
+    var prev: Node<Value>? = nil
+    var current = list.head
+    var next: Node<Value>? = nil
+
+    while current?.next != nil {
+        next = current?.next
+        current?.next = prev
+        prev = current
+        current = next
+    }
+    
+    list.head = current
+    
+    return list
+}
+
+func middleNode<Value>(list: inout LinkedList<Value>) -> Node<Value>? {
+    if list.head == nil { return nil }
+    
+    var slow = list.head
+    var fast = list.head
+    
+    while fast?.next != nil {
+        slow = slow?.next
+        fast = fast?.next?.next
+    }
+    
+    return slow
+}
+
+print(middleNode(list: &ll)?.value)
+//reverseList(list: &ll)
+
+print(ll.head?.value)
+
+
+
+
 // Define a struct to represent an edge
 struct Edge {
     let node: Int

@@ -1,31 +1,31 @@
 import Foundation
 
-//func findMaxInSubArray(array: [Int], k: Int) -> Int {
-//    var i = 0
-//    var j = 0
-//    var maxi: Int = 0
-//    var sum: Int = 0
-//
-//    while j < k {
-//        sum += array[j]
-//        j+=1
-//    }
-//
-//    maxi = sum
-//
-//    while j < array.count {
-//        print(i,j)
-//        sum -= array[i]
-//        sum += array[j]
-//        maxi = max(maxi, sum)
-//        i += 1
-//        j += 1
-//    }
-//
-//    return maxi
-//}
-//
-//findMaxInSubArray(array: [2,3,4,5,6,7,8], k: 3)
+func findMaxInSubArray(array: [Int], k: Int) -> Int {
+    var i = 0
+    var j = 0
+    var maxi: Int = 0
+    var sum: Int = 0
+
+    while j < k {
+        sum += array[j]
+        j+=1
+    }
+
+    maxi = sum
+
+    while j < array.count {
+        print(i,j)
+        sum -= array[i]
+        sum += array[j]
+        maxi = max(maxi, sum)
+        i += 1
+        j += 1
+    }
+
+    return maxi
+}
+
+findMaxInSubArray(array: [2,3,4,5,6,7,8], k: 3)
 
 //// https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1
 
