@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>1</integer>
 		</dict>
 		<key>DP_10_Grid_Unique_Paths copy (Playground) 1.xcscheme</key>
 		<dict>
@@ -37,7 +37,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>25</integer>
 		</dict>
 		<key>DP_11_Triangle (Playground) 1.xcscheme</key>
 		<dict>
@@ -58,7 +58,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>32</integer>
 		</dict>
 		<key>DP_12_MaxPath (Playground) 1.xcscheme</key>
 		<dict>
@@ -79,7 +79,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>8</integer>
 		</dict>
 		<key>DP_13_Cherrypick_2 (Playground) 1.xcscheme</key>
 		<dict>
@@ -100,7 +100,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>28</integer>
 		</dict>
 		<key>DP_14_Subset_Sum (Playground) 1.xcscheme</key>
 		<dict>
@@ -163,7 +163,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>30</integer>
 		</dict>
 		<key>DP_15_Partition_Equal_Subset (Playground) 1.xcscheme</key>
 		<dict>
@@ -184,7 +184,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>5</integer>
 		</dict>
 		<key>DP_15_Subset_Sum_Equals (Playground) 1.xcscheme</key>
 		<dict>
@@ -226,7 +226,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>22</integer>
 		</dict>
 		<key>DP_17_find_ways (Playground) 1.xcscheme</key>
 		<dict>
@@ -247,7 +247,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>7</integer>
 		</dict>
 		<key>DP_19_knapsack (Playground) 1.xcscheme</key>
 		<dict>
@@ -268,7 +268,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>23</integer>
 		</dict>
 		<key>DP_20_coins (Playground) 1.xcscheme</key>
 		<dict>
@@ -289,7 +289,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>30</integer>
+			<integer>29</integer>
 		</dict>
 		<key>DP_23_knapsack2 (Playground) 1.xcscheme</key>
 		<dict>
@@ -310,7 +310,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>12</integer>
 		</dict>
 		<key>DP_25_27_lcs (Playground) 1.xcscheme</key>
 		<dict>
@@ -331,7 +331,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>31</integer>
 		</dict>
 		<key>DP_25_lcs (Playground) 1.xcscheme</key>
 		<dict>
@@ -380,7 +380,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>20</integer>
 		</dict>
 		<key>DP_32 (Playground) 1.xcscheme</key>
 		<dict>
@@ -401,7 +401,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>26</integer>
 		</dict>
 		<key>DP_33_Edit_Distance (Playground) 1.xcscheme</key>
 		<dict>
@@ -422,7 +422,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>0</integer>
 		</dict>
 		<key>DP_34_wildcard_matching (Playground) 1.xcscheme</key>
 		<dict>
@@ -443,14 +443,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>9</integer>
 		</dict>
 		<key>DP_35_36_BuySell (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>24</integer>
 		</dict>
 		<key>DP_35_BuySell (Playground) 1.xcscheme</key>
 		<dict>
@@ -492,14 +492,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>14</integer>
 		</dict>
 		<key>DP_8_9_Grid_Unique_Paths (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>6</integer>
 		</dict>
 		<key>DP_8_Grid_Unique_Paths (Playground) 1.xcscheme</key>
 		<dict>
@@ -541,7 +541,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>16</integer>
 		</dict>
 		<key>GCD (Playground) 1.xcscheme</key>
 		<dict>
@@ -562,14 +562,35 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>4</integer>
 		</dict>
 		<key>Graph (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>33</integer>
+		</dict>
+		<key>Greedy (Playground) 1.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>37</integer>
+		</dict>
+		<key>Greedy (Playground) 2.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>38</integer>
+		</dict>
+		<key>Greedy (Playground).xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>36</integer>
 		</dict>
 		<key>L10_Combination (Playground) 1.xcscheme</key>
 		<dict>
@@ -597,7 +618,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>32</integer>
+			<integer>11</integer>
 		</dict>
 		<key>L10_Subset copy (Playground) 1.xcscheme</key>
 		<dict>
@@ -625,7 +646,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>19</integer>
 		</dict>
 		<key>L12_Permutation (Playground).xcscheme</key>
 		<dict>
@@ -653,7 +674,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>10</integer>
 		</dict>
 		<key>L16_M_colors (Playground) 1.xcscheme</key>
 		<dict>
@@ -674,7 +695,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>L17_Palindrom_subsrtrings (Playground) 1.xcscheme</key>
 		<dict>
@@ -695,14 +716,14 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>33</integer>
+			<integer>35</integer>
 		</dict>
 		<key>L6_L7_Subsequence (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>17</integer>
 		</dict>
 		<key>L6_Recursion_on_Subsequences (Playground).xcscheme</key>
 		<dict>
@@ -737,7 +758,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>27</integer>
 		</dict>
 		<key>LinkedList (Playground).xcscheme</key>
 		<dict>
@@ -772,7 +793,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Singleton (Playground) 1.xcscheme</key>
 		<dict>
@@ -814,28 +835,28 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>38</integer>
+			<integer>21</integer>
 		</dict>
 		<key>SlidingWindow (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>15</integer>
 		</dict>
 		<key>StructuralAdapter (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>31</integer>
+			<integer>34</integer>
 		</dict>
 		<key>StructuralDecorator (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>18</integer>
 		</dict>
 		<key>Swift_5_7_New_Features (Playground) 1.xcscheme</key>
 		<dict>
@@ -863,7 +884,7 @@
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>13</integer>
 		</dict>
 	</dict>
 </dict>

@@ -37,6 +37,7 @@
 		4FE1480B288AEC9A008451E6 /* DP_10_Minimum_Path_Sum.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_10_Minimum_Path_Sum.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FE3F70528D4B02F00BAE552 /* DP_32.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_32.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FED4D5D28AE78B2003ED5C5 /* DP_16_min_difference.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = DP_16_min_difference.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4FF0CE712BD50246006DAEB2 /* Greedy.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Greedy.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		4FFE5B0228D3909E00FDF7F0 /* L17_Palindrom_subsrtrings.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = L17_Palindrom_subsrtrings.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B116C7532BAACAF3003E2F59 /* SlidingWindow.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SlidingWindow.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B18ABFDE296E6FB10056F8ED /* Tree.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Tree.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -157,6 +158,21 @@
 			path = Structural;
 			sourceTree = "<group>";
 		};
+		4FF0CE702BD50227006DAEB2 /* Greedy */ = {
+			isa = PBXGroup;
+			children = (
+				4FF0CE712BD50246006DAEB2 /* Greedy.playground */,
+			);
+			path = Greedy;
+			sourceTree = "<group>";
+		};
+		4FF0CE722BD53A74006DAEB2 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		B116C7502BAACA2B003E2F59 /* DS House */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +184,7 @@
 		B116C7512BAACA35003E2F59 /* Techniques */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0CE702BD50227006DAEB2 /* Greedy */,
 				B116C7522BAACA64003E2F59 /* Sliding Window */,
 			);
 			path = Techniques;
@@ -184,6 +201,7 @@
 		B18ABFDD296E6F740056F8ED /* DS */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0CE722BD53A74006DAEB2 /* New Group */,
 				B1F9A3C82974010600116BB3 /* Graph */,
 				B18ABFDE296E6FB10056F8ED /* Tree.playground */,
 			);

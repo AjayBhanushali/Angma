@@ -1,4 +1,62 @@
 import UIKit
+
+func print(address o: UnsafeRawPointer) {
+    print(String(format: "%p", Int(bitPattern: o)))
+}
+
+struct User {
+    var name: String
+}
+
+var user1 = User(name: "A")
+var user2 = user1
+
+print(address: user1)
+print(address: user2)
+
+//var array1 = ["A"]
+//var array2 = array1
+//print(address: array1)
+//print(address: array2)
+//
+//array2.append("B")
+//print(address: array1)
+//print(address: array2)
+
+var name1 = "A"
+var name2 = name1
+
+print(address: name1)
+print(address: name2)
+
+name2 = "B"
+
+//print(name1)
+print(address: name1)
+
+print(name2)
+print(address: name2)
+
+//class Aclass {
+//    init() {
+//        print("A")
+//    }
+//}
+//
+//class Bclass: Aclass {
+//    override init() {
+//        print("B")
+//    }
+//}
+//
+//class Cclass: Bclass {
+//    override init() {
+//        print("C")
+//    }
+//}
+//
+//let c = Cclass()
+
 // Closures
 
 //var i = 0
@@ -39,7 +97,6 @@ import UIKit
 //some.doSomething()
 //
 //print("====")
-
 
 // MARK: WEAK
 

@@ -168,34 +168,34 @@ findMaxInSubArray(array: [2,3,4,5,6,7,8], k: 3)
 //print(findMax(arr: [5,1,5,2,4,9,9])) //55599
 
 //4 1 1 1 2 3 5
-//func findLongestSum(arr: [Int], sum: Int) -> Int {
-//    var longestSum = 0
-//    var n = arr.count
-//    var i = 0
-//    var j = 0
-//    
-//    var total = 0
-//    while j < n {
-//        total = total + arr[j]
-//        
-//        if total < sum {
-//            j+=1
-//        } else if total == sum {
-//            longestSum = max(longestSum, j-i+1)
-//            j+=1
-//        } else {
-//            while total > sum {
-//                total -= arr[i]
-//                i+=1
-//            }
-//            j+=1
-//        }
-//    }
-//    
-//    return longestSum
-//}
-//
-//print(findLongestSum(arr: [4,1,1,1,2,3,5], sum: 5))
+func findLongestSum(arr: [Int], sum: Int) -> Int {
+    var longestSum = 0
+    var n = arr.count
+    var i = 0
+    var j = 0
+    
+    var total = 0
+    while j < n {
+        total = total + arr[j]
+        
+        if total < sum {
+            j+=1
+        } else if total == sum {
+            longestSum = max(longestSum, j-i+1)
+            j+=1
+        } else {
+            while total > sum {
+                total -= arr[i]
+                i+=1
+            }
+            j+=1
+        }
+    }
+    
+    return longestSum
+}
+
+print(findLongestSum(arr: [4,1,1,1,2,3,5], sum: 5))
 //extension String {
 //    func at(_ i: Int) -> Character {
 //        return self[index(startIndex, offsetBy: i)]

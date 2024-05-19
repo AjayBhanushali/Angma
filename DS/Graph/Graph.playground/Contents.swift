@@ -592,7 +592,7 @@ func dfs(n: Int, m: Int, edges: [[Int]]) -> [Int] {
     return dfsResult
 }
 
-print(dfs(n: 4, m: 0, edges: [[0,1,2], [0,2,2], [1,3,2], [2,3,2]]))
+//print(dfs(n: 4, m: 0, edges: [[0,1,2], [0,2,2], [1,3,2], [2,3,2]]))
 
 // MARK: ADJ NODES
 func createAdjNodes(n: Int, m: Int, edges: [[Int]]) -> [[(node: Int, weight: Int)]] {
@@ -610,7 +610,7 @@ func createAdjNodes(n: Int, m: Int, edges: [[Int]]) -> [[(node: Int, weight: Int
 }
 
 
-//createAdjNodes(n: 5, m: 3, edges: [[1,2,5]])
+print(createAdjNodes(n: 5, m: 3, edges: [[1,2,5]]))
 
 // MARK: G5 BFS
 // Define a struct to represent an edge

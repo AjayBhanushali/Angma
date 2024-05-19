@@ -14,6 +14,7 @@ func buySell(_ list: [Int]) -> Int {
     return sell-buy
 }
 
+buySell([2,4,1])
 //buySell([[8,7,1,5,3,6,4,100,200,5,6,2,88,4,6]])
 
 func multiBuySell(_ list: [Int]) -> Int {
